@@ -1,4 +1,6 @@
 #include "PhoneBook.hpp"
+#include "utils.hpp"
+#include <iomanip>
 #include <iostream>
 
 PhoneBook::PhoneBook() : m_count{0} {}
@@ -15,9 +17,21 @@ void PhoneBook::addContact(const Contact &contact) {
   }
 }
 
+void displayHeader() {
+  std::cout << '|';
+  displayLine("id");
+  displayLine("First Name");
+  displayLine("Last Name");
+  displayLine("Nickname");
+  std::cout << std::endl;
+}
+
 void PhoneBook::displayContacts() const {
+  displayHeader();
   for (int i = 0; i < MAX_CONTACTS; i++) {
+    std::cout << '|';
+    displayLine(std::to_string(i));
     m_contacts[i].display();
-    std::cout << "-------------------------" << std::endl;
+    std::cout << std::endl;
   }
 };
