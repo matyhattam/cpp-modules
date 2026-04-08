@@ -6,10 +6,6 @@
 int main() {
   PhoneBook pb;
   int choice;
-  std::string lname;
-  std::string nname;
-  std::string pnbr;
-  std::string secr;
 
   while (1) {
     std::cout << "Awesome PhoneBook!" << std::endl;
@@ -43,8 +39,4 @@ int main() {
       return 0;
     }
   }
-  // Contact ct = Contact("maty", "hattam", "titi", "0661328874", "rien");
-
-  // pb.addContact(ct);
-  // pb.displayContacts();
 }
