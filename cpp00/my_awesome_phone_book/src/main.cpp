@@ -1,41 +1,7 @@
-#include <Contact.hpp>
+#include "Contact.hpp"
+#include "utils.hpp"
 #include <PhoneBook.hpp>
 #include <iostream>
-
-std::string cin() {
-  std::string str;
-
-  return str;
-}
-int saveInput(std::string f_name, Contact &contact) {
-  std::string field;
-
-  if (f_name == "First Name") {
-    std::cout << f_name << " : ";
-    std::cin >> field;
-    contact.setFirstName(field);
-  } else if (f_name == "Last Name") {
-    std::cout << f_name << " : ";
-    std::cin >> field;
-    contact.setLastName(field);
-  } else if (f_name == "Nickname") {
-    std::cout << f_name << " : ";
-    std::cin >> field;
-    contact.setNickname(field);
-  } else if (f_name == "Phone Number") {
-    std::cout << f_name << " : ";
-    std::cin >> field;
-    contact.setPhoneNb(field);
-  } else if (f_name == "Dark Secret") {
-    std::cout << f_name << " : ";
-    std::cin >> field;
-    contact.setDarkSecret(field);
-  } else {
-    saveInput(f_name, contact);
-  }
-
-  return 1;
-}
 
 int main() {
   PhoneBook pb;
