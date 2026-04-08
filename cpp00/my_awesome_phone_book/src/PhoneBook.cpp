@@ -26,7 +26,7 @@ void displayHeader() {
   std::cout << std::endl;
 }
 
-void PhoneBook::displayContacts() const {
+void PhoneBook::displayAllContacts() const {
   displayHeader();
   for (int i = 0; i < MAX_CONTACTS; i++) {
     std::cout << '|';
@@ -35,3 +35,7 @@ void PhoneBook::displayContacts() const {
     std::cout << std::endl;
   }
 };
+
+void PhoneBook::displayContact(const int i) const {
+  m_contacts[i].displayContactInfo();
+}

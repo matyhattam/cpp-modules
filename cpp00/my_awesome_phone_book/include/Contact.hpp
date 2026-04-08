@@ -18,4 +18,11 @@ public:
           std::string m_dark_secret);
 
   void display() const;
+  void displayContactInfo() const;
+
+  int setFirstName(const std::string &fname);
+  int setLastName(const std::string &lname);
+  int setNickname(const std::string &nname);
+  int setPhoneNb(const std::string &pnbr);
+  int setDarkSecret(const std::string &secr);
 };
