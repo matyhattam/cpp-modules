@@ -9,4 +9,13 @@ int main() {
   randomChump("Maeva");
 
   delete zb_quentin;
+
+  Zombie *horde = zombieHorde(10, "test");
+  horde->announce();
+
+  for (int i = 0; i < 10; i++) {
+    horde->announce();
+  }
+
+  delete[] horde;
 }
