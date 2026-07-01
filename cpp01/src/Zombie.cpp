@@ -3,14 +3,18 @@
 
 Zombie::Zombie(std::string name) { name_ = name; }
 
-void Zombie::announce() { std::cout << name_ << ": Braiiiiiinnnzzz..."; }
+void Zombie::announce() {
+  std::cout << name_ << ": Braiiiiiinnnzzz..." << std::endl;
+}
 
 Zombie *newZombie(std::string name) { return new Zombie(name); }
 
 std::string Zombie::getName(void) { return name_; }
 void Zombie::setName(std::string name) { name_ = name; }
 
-Zombie::~Zombie(void) { std::cout << name_ << " has been deleted."; }
+Zombie::~Zombie(void) {
+  std::cout << name_ << " has been deleted." << std::endl;
+}
 
 void randomChump(std::string name) {
   Zombie zb = Zombie(name);
