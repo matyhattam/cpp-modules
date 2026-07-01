@@ -22,12 +22,12 @@ int main() {
 
   // delete[] horde;
 
-  HumanA h_maty = HumanA("maty", Weapon());
+  HumanA h_maty = HumanA("maty", Weapon("Bate"));
+  h_maty.attack();
   h_maty.setWeaponType("hache");
   h_maty.attack();
 
   HumanB h_maeva = HumanB("maeva");
-  h_maeva.setWeapon(Weapon());
-  h_maeva.setWeaponType("Epée");
+  h_maeva.setWeapon(Weapon("lazer"));
   h_maeva.attack();
 }

@@ -7,6 +7,7 @@ private:
 
 public:
   Weapon() = default;
+  Weapon(std::string type);
   ~Weapon(void);
 
   std::string getType(void);
