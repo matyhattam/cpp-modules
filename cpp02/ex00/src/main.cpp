@@ -9,4 +9,6 @@ int main() {
   std::cout << f.getRawBits() << std::endl;
   std::cout << f.toFloat() << std::endl;
   std::cout << i << " " << f << std::endl;
+
+  std::cout << f.operator<(i) << std::endl;
 }

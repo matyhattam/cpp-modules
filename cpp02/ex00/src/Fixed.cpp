@@ -39,3 +39,64 @@ std::ostream &operator<<(std::ostream &os, const Fixed &fixed) {
   os << fixed.toFloat();
   return os;
 }
+
+bool Fixed::operator<(const Fixed &src) const {
+  return value_ < src.getRawBits();
+}
+bool Fixed::operator>(const Fixed &src) const {
+  return value_ > src.getRawBits();
+}
+bool Fixed::operator<=(const Fixed &src) const {
+  return value_ <= src.getRawBits();
+}
+bool Fixed::operator>=(const Fixed &src) const {
+  return value_ >= src.getRawBits();
+}
+bool Fixed::operator!=(const Fixed &src) const {
+  return value_ != src.getRawBits();
+}
+
+Fixed Fixed::operator+(const Fixed &src) const {
+  return value_ + src.getRawBits();
+}
+Fixed Fixed::operator-(const Fixed &src) const {
+  return value_ - src.getRawBits();
+}
+Fixed Fixed::operator*(const Fixed &src) const {
+  Fixed result;
+  long long rawBits = ((long long)value_ * src.getRawBits()) >> fractionalBits_;
+  result.setRawBits((int)rawBits);
+  return result;
+}
+Fixed Fixed::operator/(const Fixed &src) const {
+  if (src.getRawBits() != 0) {
+    Fixed result;
+    long long rawBits =
+        ((long long)value_ << fractionalBits_) / src.getRawBits();
+    result.setRawBits((int)rawBits);
+    return result;
+  }
+  throw std::runtime_error("Division by 0");
+}
+
+Fixed &Fixed::operator++() {
+  ++value_;
+  return *this;
+}
+
+Fixed Fixed::operator++(int) {
+  Fixed tmp(*this);
+  ++value_;
+  return tmp;
+}
+
+Fixed &Fixed::operator--() {
+  --value_;
+  return *this;
+}
+
+Fixed Fixed::operator--(int) {
+  Fixed tmp(*this);
+  --value_;
+  return tmp;
+}

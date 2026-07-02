@@ -18,6 +18,23 @@ public:
 
   float toFloat(void) const;
   int toInt(void) const;
+
+  bool operator<(const Fixed &src) const;
+  bool operator>(const Fixed &src) const;
+  bool operator<=(const Fixed &src) const;
+  bool operator>=(const Fixed &src) const;
+  bool operator!=(const Fixed &src) const;
+
+  Fixed operator+(const Fixed &src) const;
+  Fixed operator-(const Fixed &src) const;
+  Fixed operator*(const Fixed &src) const;
+  Fixed operator/(const Fixed &src) const;
+
+  Fixed &operator++();
+  Fixed operator++(int);
+
+  Fixed &operator--();
+  Fixed operator--(int);
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
