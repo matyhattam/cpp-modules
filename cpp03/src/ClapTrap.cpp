@@ -1,9 +1,8 @@
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap(std::string name) {
+ClapTrap::ClapTrap(std::string name) : name_(name) {
   std::cout << "ClapTrap constructor called" << std::endl;
-  name_ = name;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &src) {

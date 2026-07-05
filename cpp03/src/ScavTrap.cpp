@@ -1,7 +1,7 @@
 #include "ScavTrap.hpp"
 #include <iostream>
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(move(name)) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap(std::move(name)) {
   std::cout << "ScavTrap constructor called" << std::endl;
   hp_ = 100;
   ep_ = 50;
