@@ -1,7 +1,8 @@
+#pragma once
 #include <string>
 
 class ClapTrap {
-private:
+protected:
   std::string name_;
   int hp_ = 10;
   int ep_ = 10;

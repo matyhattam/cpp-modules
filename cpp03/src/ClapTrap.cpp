@@ -2,7 +2,7 @@
 #include <iostream>
 
 ClapTrap::ClapTrap(std::string name) {
-  std::cout << "constructor called" << std::endl;
+  std::cout << "ClapTrap constructor called" << std::endl;
   name_ = name;
 }
 
@@ -19,7 +19,9 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &src) {
   return *this;
 }
 
-ClapTrap::~ClapTrap(void) { std::cout << "Destructor called" << std::endl; };
+ClapTrap::~ClapTrap(void) {
+  std::cout << "ClapTrap Destructor called" << std::endl;
+};
 
 int ClapTrap::getHp(void) { return hp_; }
 void ClapTrap::setHp(int points) { hp_ += points; }
