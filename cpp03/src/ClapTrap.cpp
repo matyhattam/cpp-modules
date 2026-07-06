@@ -1,8 +1,19 @@
 #include "ClapTrap.hpp"
 #include <iostream>
 
+ClapTrap::ClapTrap(void) {
+  std::cout << "Default ClapTrap constructor called" << std::endl;
+  name_ = "Clap Doe";
+  hp_ = 10;
+  ep_ = 10;
+  ad_ = 0;
+}
+
 ClapTrap::ClapTrap(std::string name) : name_(name) {
-  std::cout << "ClapTrap constructor called" << std::endl;
+  std::cout << "Parametric ClapTrap constructor called" << std::endl;
+  hp_ = 10;
+  ep_ = 10;
+  ad_ = 0;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &src) {

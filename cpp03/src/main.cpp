@@ -1,4 +1,5 @@
 #include "ClapTrap.hpp"
+#include "DiamondTrap.hpp"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
@@ -21,4 +22,10 @@ int main() {
   frag.takeDamage(5);
   frag.beRepaired(3);
   frag.highFiveGuys();
+
+  DiamondTrap diamond("Diamond");
+  diamond.attack("Jim");
+  diamond.takeDamage(5);
+  diamond.beRepaired(5);
+  diamond.whoAmI();
 }

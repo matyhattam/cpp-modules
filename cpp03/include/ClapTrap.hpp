@@ -9,6 +9,7 @@ protected:
   int ad_ = 0;
 
 public:
+  ClapTrap(void);
   ClapTrap(std::string name);
   ClapTrap(const ClapTrap &src);
   ClapTrap &operator=(const ClapTrap &src);
