@@ -1,4 +1,3 @@
-#pragma once
 #include "Animal.hpp"
 #include <iostream>
 
@@ -27,4 +26,4 @@ Animal::~Animal(void) {
   std::cout << "Destructor for animal called" << std::endl;
 }
 
-void Animal::makeSound(void) { std::cout << "Some animal sound"; }
+void Animal::makeSound(void) { std::cout << "Some animal sound" << std::endl; }
