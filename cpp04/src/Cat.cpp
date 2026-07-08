@@ -23,6 +23,6 @@ Cat &Cat::operator=(const Cat &src) {
   return *this;
 }
 
-Cat::~Cat(void) { std::cout << "Destructor for animal called" << std::endl; }
+Cat::~Cat(void) { std::cout << "Destructor for Cat called" << std::endl; }
 
 void Cat::makeSound(void) { std::cout << "Miaou" << std::endl; }
