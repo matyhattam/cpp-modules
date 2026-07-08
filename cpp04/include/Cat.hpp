@@ -1,7 +1,7 @@
 #include "Animal.hpp"
 #include <string>
 
-class Cat : virtual public Animal {
+class Cat : public Animal {
 protected:
   std::string name_;
 
@@ -11,5 +11,5 @@ public:
   Cat(const Cat &src);
   Cat &operator=(const Cat &src);
   ~Cat(void);
-  void makeSound();
+  void makeSound() const;
 };

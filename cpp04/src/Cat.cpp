@@ -25,4 +25,4 @@ Cat &Cat::operator=(const Cat &src) {
 
 Cat::~Cat(void) { std::cout << "Destructor for Cat called" << std::endl; }
 
-void Cat::makeSound(void) { std::cout << "Miaou" << std::endl; }
+void Cat::makeSound(void) const { std::cout << "Miaou" << std::endl; }
